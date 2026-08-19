@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Caso 001 · Calificación y seguimiento de leads | PROMPTFORGE</title>
+  <meta name="description" content="Demostración técnica PROMPTFORGE: arquitectura mínima para calificar, registrar y seguir leads con IA, reglas deterministas y control humano.">
+  <meta name="theme-color" content="#0b1020">
+  <style>
+    :root{--bg:#0b1020;--panel:#121933;--text:#f4f7ff;--muted:#aeb7d1;--line:#283252;--accent:#8dd8ff;--accent2:#b7ffcf;--warm:#ffd58d;--max:1060px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 20% 0%,#18254b 0,#0b1020 35%,#080c18 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.65}.wrap{width:min(var(--max),calc(100% - 32px));margin:auto}a{color:inherit}.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}.brand{font-weight:850;letter-spacing:.08em}.back{color:var(--muted);text-decoration:none}.hero{padding:64px 0 42px}.eyebrow{color:var(--accent2);font-size:.82rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.hero h1{font-size:clamp(2.5rem,6vw,5.1rem);line-height:1;margin:.35em 0 .3em;letter-spacing:-.05em;max-width:920px}.hero p,.lead{font-size:1.15rem;color:var(--muted);max-width:800px}.tag{display:inline-block;border:1px solid var(--line);padding:7px 11px;border-radius:999px;color:var(--warm);font-size:.82rem;margin-top:14px}section{padding:52px 0}.title{font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;letter-spacing:-.035em}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:24px}.card{background:linear-gradient(180deg,#131b35,#0f162a);border:1px solid var(--line);border-radius:18px;padding:21px}.card h3{margin-top:0}.card p{color:var(--muted);margin-bottom:0}.flow{background:#090e1d;border:1px solid var(--line);border-radius:20px;padding:24px;overflow:auto;margin-top:24px}.flow code{white-space:pre-wrap;color:#d7e6ff;font-size:.98rem}.check{padding-left:20px;color:var(--muted)}.check li{margin:8px 0}.result{border-left:3px solid var(--accent2);padding:1px 0 1px 16px;margin-top:20px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;text-decoration:none;border-radius:14px;padding:14px 18px;font-weight:850;border:1px solid var(--line)}.primary{background:linear-gradient(135deg,var(--accent),#b6f1ff);color:#06111a;border:none}.secondary{background:#10172b}.footer{padding:38px 0 62px;border-top:1px solid var(--line);color:#7f8aa8;font-size:.9rem}@media(max-width:800px){.grid{grid-template-columns:1fr}.hero{padding-top:38px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav"><div class="brand">PROMPTFORGE</div><a class="back" href="./">← Volver</a></nav>
+  <header class="hero">
+    <div class="eyebrow">Caso 001 · Demostración técnica</div>
+    <h1>Calificar y seguir leads sin convertir todo en un “agente mágico”.</h1>
+    <p>Diseño de referencia para negocios que reciben consultas, cotizan y luego pierden oportunidades por respuestas tardías, datos incompletos o falta de seguimiento.</p>
+    <span class="tag">No es un caso de cliente. Es una arquitectura demostrativa PROMPTFORGE.</span>
+  </header>
+
+  <section>
+    <h2 class="title">El problema</h2>
+    <div class="grid">
+      <article class="card"><h3>Consultas dispersas</h3><p>Los prospectos llegan por formulario, correo o mensajería con distinta cantidad de información.</p></article>
+      <article class="card"><h3>Priorización manual</h3><p>Una persona debe leer todo para saber quién quiere comprar, quién solo pregunta y quién requiere atención humana.</p></article>
+      <article class="card"><h3>Seguimiento frágil</h3><p>Una cotización enviada puede quedar sin respuesta y desaparecer de la agenda comercial.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">Arquitectura mínima propuesta</h2>
+    <p class="lead">La IA se usa donde aporta interpretación. Los datos, estados, reglas y temporizadores se mantienen deterministas para poder auditarlos.</p>
+    <div class="flow"><code>WhatsApp / formulario / correo
+        ↓
+Normalización de datos
+        ↓
+Extracción: nombre · necesidad · presupuesto · plazo · ubicación
+        ↓
+Reglas deterministas
+  ├─ datos mínimos completos → continuar
+  ├─ falta información → pedir solo lo necesario
+  └─ condición sensible / excepción → humano
+        ↓
+IA: intención + resumen + propuesta de respuesta
+        ↓
+CRM / base estructurada
+        ↓
+Estado comercial
+  NUEVO → CALIFICADO → COTIZADO → SEGUIMIENTO → GANADO / PERDIDO
+        ↓
+Temporizador de seguimiento
+        ↓
+Recordatorio o mensaje aprobado
+        ↓
+Métricas: respuesta · cotización · conversión · tiempo</code></div>
+  </section>
+
+  <section>
+    <h2 class="title">Qué NO necesita IA</h2>
+    <div class="grid">
+      <article class="card"><h3>Cálculos</h3><p>Precios, descuentos, fechas y totales deben resolverse con código o reglas verificables.</p></article>
+      <article class="card"><h3>Estados</h3><p>El avance de cada lead debe persistir como datos estructurados, no depender de “memoria” conversacional.</p></article>
+      <article class="card"><h3>Condiciones críticas</h3><p>Permisos, límites, derivaciones y acciones externas deben tener reglas explícitas y trazabilidad.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">Cómo probaríamos que funciona</h2>
+    <ul class="check">
+      <li>Lead con todos los datos y alta intención de compra.</li>
+      <li>Lead ambiguo que requiere una sola pregunta adicional.</li>
+      <li>Mensaje irrelevante o spam.</li>
+      <li>Cliente molesto que debe pasar a una persona.</li>
+      <li>Cotización sin respuesta durante el plazo definido.</li>
+      <li>Duplicados del mismo prospecto.</li>
+      <li>Fallo de API o servicio externo sin perder el estado.</li>
+    </ul>
+    <div class="result"><p><strong>Criterio de éxito:</strong> que el sistema reduzca trabajo repetitivo sin inventar datos, perder leads ni impedir la intervención humana.</p></div>
+  </section>
+
+  <section>
+    <h2 class="title">Cómo se construiría un piloto</h2>
+    <div class="grid">
+      <article class="card"><h3>1. Un canal</h3><p>Partir con una única entrada real antes de conectar todos los canales.</p></article>
+      <article class="card"><h3>2. Un flujo</h3><p>Calificación, registro, estado y seguimiento de un tipo concreto de lead.</p></article>
+      <article class="card"><h3>3. Evals</h3><p>Probar casos normales, ambiguos y límite antes de ampliar la automatización.</p></article>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="mailto:disenoweb369@gmail.com?subject=Quiero%20un%20sistema%20similar%20al%20Caso%20001&body=Hola%2C%20vi%20el%20Caso%20001%20de%20PROMPTFORGE.%0A%0AMi%20negocio%3A%0AC%C3%B3mo%20recibo%20consultas%3A%0AQu%C3%A9%20parte%20quiero%20automatizar%3A">Quiero evaluar un sistema similar</a>
+      <a class="btn secondary" href="./">Ver PROMPTFORGE</a>
+    </div>
+  </section>
+
+  <footer class="footer">PROMPTFORGE · Caso 001 · Demostración técnica de arquitectura IA aplicada.<br>Contacto: disenoweb369@gmail.com</footer>
+</div>
+</body>
+</html>
