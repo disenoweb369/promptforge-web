@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PROMPTFORGE MCP · Arquitectura IA mínima y útil</title>
+  <meta name="description" content="Describe tu problema. PROMPTFORGE determina si necesitas prompt, agente, automatización, RAG, MCP, código o algo más simple, y diseña la arquitectura mínima para resolverlo.">
+  <meta name="theme-color" content="#0b1020">
+  <style>
+    :root{--bg:#0b1020;--panel:#121933;--text:#f4f7ff;--muted:#aeb7d1;--line:#283252;--accent:#8dd8ff;--accent2:#b7ffcf;--warm:#ffd58d;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 20% 0%,#18254b 0,#0b1020 35%,#080c18 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:inherit}.wrap{width:min(var(--max),calc(100% - 32px));margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}.brand{font-weight:850;letter-spacing:.08em}.badge{font-size:.78rem;border:1px solid var(--line);background:#11182d;border-radius:999px;padding:7px 11px;color:var(--accent2)}
+    .hero{padding:72px 0 54px}.eyebrow{color:var(--accent2);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.82rem}.hero h1{font-size:clamp(2.6rem,7vw,5.8rem);line-height:.98;margin:.35em 0 .28em;max-width:970px;letter-spacing:-.05em}.hero p{font-size:clamp(1.08rem,2.2vw,1.38rem);color:var(--muted);max-width:780px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-block;text-decoration:none;border-radius:14px;padding:14px 18px;font-weight:800;border:1px solid var(--line)}.btn.primary{background:linear-gradient(135deg,var(--accent),#b6f1ff);color:#06111a;border:none}.btn.secondary{background:#10172b}.mini{margin-top:18px;color:#8994b2;font-size:.9rem}
+    section{padding:64px 0}.section-title{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;margin:0 0 18px;letter-spacing:-.035em}.lead{color:var(--muted);max-width:780px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.card{background:linear-gradient(180deg,#131b35,#0f162a);border:1px solid var(--line);border-radius:20px;padding:22px}.card h3{margin:0 0 8px}.card p{margin:0;color:var(--muted)}
+    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:26px}.step{border:1px solid var(--line);background:#0f162a;border-radius:16px;padding:16px;font-weight:750}.step small{display:block;color:#7f8aa8;font-weight:500;margin-top:6px}
+    .demo{margin-top:28px;background:#090e1d;border:1px solid var(--line);border-radius:20px;padding:24px;overflow:auto}.demo code{white-space:pre-wrap;color:#d7e6ff}.offer{display:grid;grid-template-columns:1.3fr .7fr;gap:18px;margin-top:24px}.price{font-size:2.3rem;font-weight:900;letter-spacing:-.04em}.list{padding-left:18px;color:var(--muted)}.notice{border-left:3px solid var(--warm);padding-left:14px;color:#e7d7b7;margin-top:20px}.footer{padding:42px 0 70px;color:#7f8aa8;font-size:.9rem;border-top:1px solid var(--line)}
+    @media(max-width:820px){.grid,.flow,.offer{grid-template-columns:1fr}.hero{padding-top:42px}.nav .badge{display:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="nav"><div class="brand">PROMPTFORGE MCP</div><div class="badge">Arquitectura mínima · IA aplicada</div></nav>
+
+    <header class="hero">
+      <div class="eyebrow">Primero el problema. Después la tecnología.</div>
+      <h1>Describe tu problema. Diseñamos la arquitectura IA mínima para resolverlo.</h1>
+      <p>No todo necesita un agente. No todo necesita RAG. No todo necesita automatización. PROMPTFORGE analiza el objetivo y determina qué conviene usar, qué sobra y cómo probar si realmente funciona.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:disenoweb369@gmail.com?subject=Quiero%20evaluar%20un%20problema%20con%20PROMPTFORGE&body=Hola%2C%20quiero%20evaluar%20este%20problema%3A%0A%0AObjetivo%3A%0AProceso%20actual%3A%0AQu%C3%A9%20me%20quita%20tiempo%20o%20dinero%3A%0AResultado%20que%20quiero%3A">Cuéntame tu problema</a>
+        <a class="btn secondary" href="#metodo">Ver cómo funciona</a>
+      </div>
+      <div class="mini">Piloto inicial · enfoque práctico · sin vender tecnología innecesaria</div>
+    </header>
+
+    <section id="metodo">
+      <h2 class="section-title">Un filtro antes de construir.</h2>
+      <p class="lead">PROMPTFORGE separa lo que debe resolver un modelo de IA de lo que conviene resolver con reglas, código, datos estructurados o herramientas existentes.</p>
+      <div class="flow">
+        <div class="step">1. Problema<small>Qué resultado importa realmente.</small></div>
+        <div class="step">2. Diagnóstico<small>Dónde está el cuello de botella.</small></div>
+        <div class="step">3. Arquitectura<small>Prompt, código, agente, tool, RAG o nada extra.</small></div>
+        <div class="step">4. Prueba<small>Casos normales, difíciles y límite.</small></div>
+        <div class="step">5. Simplificación<small>Quitar lo que no aporta valor.</small></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Qué podemos construir</h2>
+      <div class="grid">
+        <article class="card"><h3>Prompts y sistemas de instrucciones</h3><p>Prompts medibles, mantenibles y probados. No “prompts gigantes” por apariencia.</p></article>
+        <article class="card"><h3>Agentes y automatización</h3><p>Flujos con herramientas, APIs, código y control humano cuando el problema lo justifica.</p></article>
+        <article class="card"><h3>Arquitectura RAG y retrieval</h3><p>Solo cuando existe un corpus suficientemente grande y recuperar evidencia aporta valor real.</p></article>
+        <article class="card"><h3>Procesos con Python</h3><p>Automatización determinista para cálculos, validaciones, archivos, reportes y operaciones repetitivas.</p></article>
+        <article class="card"><h3>MCP e integraciones</h3><p>Interoperabilidad con herramientas y servicios externos cuando simplifica la solución.</p></article>
+        <article class="card"><h3>Evals y depuración</h3><p>Casos de prueba, análisis de fallos y comparación de versiones para saber qué mejora de verdad.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Ejemplo de decisión</h2>
+      <p class="lead">Una empresa quiere automatizar un reporte semanal de KPIs. La respuesta no tiene por qué ser “construir un agente”. Primero se separan las piezas.</p>
+      <div class="demo"><code>Datos de entrada
+→ validación determinista
+→ cálculo de KPIs con código
+→ IA solo para interpretar patrones y redactar conclusiones
+→ plantilla de informe
+→ control de calidad
+→ entrega
+
+Resultado: menos complejidad, menor coste y una salida verificable.</code></div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Piloto de arquitectura IA aplicada</h2>
+      <div class="offer">
+        <div class="card">
+          <h3>Primero demostramos valor.</h3>
+          <p>Seleccionamos un problema concreto y diseñamos una primera solución acotada. El objetivo es descubrir rápidamente si conviene seguir, cambiar de enfoque o no automatizar.</p>
+          <ul class="list">
+            <li>diagnóstico del proceso;</li>
+            <li>arquitectura mínima recomendada;</li>
+            <li>componentes necesarios y descartados;</li>
+            <li>primer prompt, flujo o prototipo cuando corresponda;</li>
+            <li>casos de prueba;</li>
+            <li>plan de siguiente etapa.</li>
+          </ul>
+          <div class="notice">No prometemos resultados inventados ni vendemos una tecnología específica antes de entender el problema.</div>
+        </div>
+        <div class="card">
+          <div class="eyebrow">Validación inicial</div>
+          <div class="price">Cotización según alcance</div>
+          <p>Partimos por una pieza pequeña. Si tiene sentido continuar, la siguiente fase se define con evidencia.</p>
+          <div class="actions"><a class="btn primary" href="mailto:disenoweb369@gmail.com?subject=Solicitud%20de%20piloto%20PROMPTFORGE&body=Hola%2C%20quiero%20cotizar%20un%20piloto.%0A%0AProblema%3A%0AResultado%20esperado%3A%0AHerramientas%20que%20uso%20hoy%3A">Solicitar evaluación</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">La regla de PROMPTFORGE</h2>
+      <div class="demo"><code>¿Qué problema resuelve?
+¿Existe una forma más simple?
+¿Podemos demostrar que aporta valor?
+
+Si no podemos responder las tres: no lo agregamos.</code></div>
+    </section>
+
+    <footer class="footer">PROMPTFORGE MCP · Arquitectura, prompts, agentes y automatización IA con complejidad justificada.<br>Contacto: disenoweb369@gmail.com</footer>
+  </div>
+</body>
+</html>
