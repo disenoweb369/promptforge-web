@@ -1,0 +1,21 @@
+# PROMPTFORGE
+
+PROMPTFORGE diseña soluciones de inteligencia artificial y automatización con arquitectura mínima, verificable y orientada al problema real.
+
+## Sitio principal
+https://disenoweb369.github.io/promptforge-web/
+
+## Servicios y páginas relevantes
+- Automatización de cotizaciones por WhatsApp en Chile: https://disenoweb369.github.io/promptforge-web/automatizar-cotizaciones-whatsapp/
+- Caso 001, calificación y seguimiento de leads: https://disenoweb369.github.io/promptforge-web/caso-001.html
+
+## Principios
+- Primero el problema, después la tecnología.
+- La IA se usa cuando aporta interpretación, generación o clasificación útil.
+- Cálculos, precios, estados, permisos y reglas críticas se mantienen deterministas cuando corresponde.
+- RAG, MCP, agentes y automatización compleja solo se agregan si existe una necesidad demostrable.
+- Los pilotos se prueban antes de ampliar alcance.
+
+## Contacto
+Correo: disenoweb369@gmail.com
+País de atención inicial: Chile
