@@ -1,11 +1,31 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>PROMPTFORGE MCP · Arquitectura IA mínima y útil</title>
-  <meta name="description" content="Describe tu problema. PROMPTFORGE determina si necesitas prompt, agente, automatización, RAG, MCP, código o algo más simple, y diseña la arquitectura mínima para resolverlo.">
+  <title>PROMPTFORGE | Automatización e IA aplicada para pymes en Chile</title>
+  <meta name="description" content="PROMPTFORGE diseña automatizaciones, agentes, prompts y soluciones con IA para pymes en Chile. Empezamos por el problema, usamos la arquitectura mínima y probamos antes de ampliar.">
+  <link rel="canonical" href="https://disenoweb369.github.io/promptforge-web/">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="theme-color" content="#0b1020">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:title" content="PROMPTFORGE | Automatización e IA aplicada para pymes en Chile">
+  <meta property="og:description" content="Soluciones de IA y automatización con complejidad justificada. Primero el problema, después la tecnología.">
+  <meta property="og:url" content="https://disenoweb369.github.io/promptforge-web/">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"PROMPTFORGE",
+    "url":"https://disenoweb369.github.io/promptforge-web/",
+    "email":"mailto:disenoweb369@gmail.com",
+    "areaServed":{"@type":"Country","name":"Chile"},
+    "description":"Diseño de automatizaciones y soluciones de inteligencia artificial con arquitectura mínima, verificable y orientada al problema real.",
+    "knowsAbout":["automatización con IA","agentes de IA","Python","evaluación de sistemas de IA","cotizaciones por WhatsApp","prompts","RAG","MCP"]
+  }
+  </script>
   <style>
     :root{--bg:#0b1020;--panel:#121933;--text:#f4f7ff;--muted:#aeb7d1;--line:#283252;--accent:#8dd8ff;--accent2:#b7ffcf;--warm:#ffd58d;--max:1120px}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 20% 0%,#18254b 0,#0b1020 35%,#080c18 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
@@ -13,24 +33,35 @@
     .hero{padding:72px 0 54px}.eyebrow{color:var(--accent2);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.82rem}.hero h1{font-size:clamp(2.6rem,7vw,5.8rem);line-height:.98;margin:.35em 0 .28em;max-width:970px;letter-spacing:-.05em}.hero p{font-size:clamp(1.08rem,2.2vw,1.38rem);color:var(--muted);max-width:780px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-block;text-decoration:none;border-radius:14px;padding:14px 18px;font-weight:800;border:1px solid var(--line)}.btn.primary{background:linear-gradient(135deg,var(--accent),#b6f1ff);color:#06111a;border:none}.btn.secondary{background:#10172b}.mini{margin-top:18px;color:#8994b2;font-size:.9rem}
     section{padding:64px 0}.section-title{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;margin:0 0 18px;letter-spacing:-.035em}.lead{color:var(--muted);max-width:780px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.card{background:linear-gradient(180deg,#131b35,#0f162a);border:1px solid var(--line);border-radius:20px;padding:22px}.card h3{margin:0 0 8px}.card p{margin:0;color:var(--muted)}
     .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:26px}.step{border:1px solid var(--line);background:#0f162a;border-radius:16px;padding:16px;font-weight:750}.step small{display:block;color:#7f8aa8;font-weight:500;margin-top:6px}
-    .demo{margin-top:28px;background:#090e1d;border:1px solid var(--line);border-radius:20px;padding:24px;overflow:auto}.demo code{white-space:pre-wrap;color:#d7e6ff}.offer{display:grid;grid-template-columns:1.3fr .7fr;gap:18px;margin-top:24px}.price{font-size:2.3rem;font-weight:900;letter-spacing:-.04em}.list{padding-left:18px;color:var(--muted)}.notice{border-left:3px solid var(--warm);padding-left:14px;color:#e7d7b7;margin-top:20px}.footer{padding:42px 0 70px;color:#7f8aa8;font-size:.9rem;border-top:1px solid var(--line)}
+    .demo{margin-top:28px;background:#090e1d;border:1px solid var(--line);border-radius:20px;padding:24px;overflow:auto}.demo code{white-space:pre-wrap;color:#d7e6ff}.offer{display:grid;grid-template-columns:1.3fr .7fr;gap:18px;margin-top:24px}.price{font-size:2.3rem;font-weight:900;letter-spacing:-.04em}.list{padding-left:18px;color:var(--muted)}.notice{border-left:3px solid var(--warm);padding-left:14px;color:#e7d7b7;margin-top:20px}.feature{border:1px solid #345067;background:linear-gradient(180deg,#12213a,#0f172a);border-radius:24px;padding:26px;margin-top:24px}.feature .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--warm);font-size:.8rem;font-weight:800}.footer{padding:42px 0 70px;color:#7f8aa8;font-size:.9rem;border-top:1px solid var(--line)}
     @media(max-width:820px){.grid,.flow,.offer{grid-template-columns:1fr}.hero{padding-top:42px}.nav .badge{display:none}}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <nav class="nav"><div class="brand">PROMPTFORGE MCP</div><div class="badge">Arquitectura mínima · IA aplicada</div></nav>
+    <nav class="nav"><div class="brand">PROMPTFORGE</div><div class="badge">Chile · IA aplicada · automatización</div></nav>
 
     <header class="hero">
       <div class="eyebrow">Primero el problema. Después la tecnología.</div>
-      <h1>Describe tu problema. Diseñamos la arquitectura IA mínima para resolverlo.</h1>
-      <p>No todo necesita un agente. No todo necesita RAG. No todo necesita automatización. PROMPTFORGE analiza el objetivo y determina qué conviene usar, qué sobra y cómo probar si realmente funciona.</p>
+      <h1>Describe tu problema. Diseñamos la solución mínima para resolverlo.</h1>
+      <p>PROMPTFORGE ayuda a pymes y proyectos en Chile a automatizar procesos, aplicar inteligencia artificial y construir herramientas sin añadir agentes, RAG o infraestructura cuando no hacen falta.</p>
       <div class="actions">
         <a class="btn primary" href="mailto:disenoweb369@gmail.com?subject=Quiero%20evaluar%20un%20problema%20con%20PROMPTFORGE&body=Hola%2C%20quiero%20evaluar%20este%20problema%3A%0A%0AObjetivo%3A%0AProceso%20actual%3A%0AQu%C3%A9%20me%20quita%20tiempo%20o%20dinero%3A%0AResultado%20que%20quiero%3A">Cuéntame tu problema</a>
         <a class="btn secondary" href="#metodo">Ver cómo funciona</a>
       </div>
       <div class="mini">Piloto inicial · enfoque práctico · sin vender tecnología innecesaria</div>
     </header>
+
+    <section>
+      <h2 class="section-title">Solución destacada: cotizaciones por WhatsApp</h2>
+      <p class="lead">Si tus clientes envían pedidos incompletos o desordenados, podemos convertir esas conversaciones en fichas estructuradas con producto, cantidad, talla o medida, personalización, plazo, despacho y datos faltantes.</p>
+      <div class="feature">
+        <span class="pill">Para uniformes, imprentas, bordados y productos personalizados</span>
+        <h3>Menos repreguntas. Información lista para cotizar.</h3>
+        <p class="lead">La IA puede interpretar el mensaje. Los precios, descuentos, impuestos y reglas críticas permanecen verificables.</p>
+        <div class="actions"><a class="btn primary" href="./automatizar-cotizaciones-whatsapp/">Ver automatización de cotizaciones</a></div>
+      </div>
+    </section>
 
     <section id="metodo">
       <h2 class="section-title">Un filtro antes de construir.</h2>
@@ -47,18 +78,18 @@
     <section>
       <h2 class="section-title">Qué podemos construir</h2>
       <div class="grid">
-        <article class="card"><h3>Prompts y sistemas de instrucciones</h3><p>Prompts medibles, mantenibles y probados. No “prompts gigantes” por apariencia.</p></article>
-        <article class="card"><h3>Agentes y automatización</h3><p>Flujos con herramientas, APIs, código y control humano cuando el problema lo justifica.</p></article>
-        <article class="card"><h3>Arquitectura RAG y retrieval</h3><p>Solo cuando existe un corpus suficientemente grande y recuperar evidencia aporta valor real.</p></article>
+        <article class="card"><h3>Automatización de procesos</h3><p>Flujos para reducir tareas repetitivas, ordenar datos y mantener control humano cuando corresponde.</p></article>
+        <article class="card"><h3>Prompts y sistemas de instrucciones</h3><p>Prompts medibles, mantenibles y probados. No prompts gigantes por apariencia.</p></article>
+        <article class="card"><h3>Agentes e integraciones</h3><p>Herramientas, APIs y agentes solo cuando el problema realmente necesita acciones o interoperabilidad.</p></article>
         <article class="card"><h3>Procesos con Python</h3><p>Automatización determinista para cálculos, validaciones, archivos, reportes y operaciones repetitivas.</p></article>
-        <article class="card"><h3>MCP e integraciones</h3><p>Interoperabilidad con herramientas y servicios externos cuando simplifica la solución.</p></article>
+        <article class="card"><h3>RAG y recuperación</h3><p>Solo cuando existe un corpus suficientemente grande y recuperar evidencia aporta valor real.</p></article>
         <article class="card"><h3>Evals y depuración</h3><p>Casos de prueba, análisis de fallos y comparación de versiones para saber qué mejora de verdad.</p></article>
       </div>
     </section>
 
     <section>
       <h2 class="section-title">Ejemplo de decisión</h2>
-      <p class="lead">Una empresa quiere automatizar un reporte semanal de KPIs. La respuesta no tiene por qué ser “construir un agente”. Primero se separan las piezas.</p>
+      <p class="lead">Una empresa quiere automatizar un reporte semanal de KPIs. La respuesta no tiene por qué ser construir un agente. Primero se separan las piezas.</p>
       <div class="demo"><code>Datos de entrada
 → validación determinista
 → cálculo de KPIs con código
@@ -96,6 +127,12 @@ Resultado: menos complejidad, menor coste y una salida verificable.</code></div>
     </section>
 
     <section>
+      <h2 class="section-title">Casos y demostraciones</h2>
+      <p class="lead">Mostramos la arquitectura y los criterios de prueba sin presentar demostraciones internas como clientes reales.</p>
+      <div class="actions"><a class="btn secondary" href="./caso-001.html">Ver Caso 001: calificación y seguimiento de leads</a></div>
+    </section>
+
+    <section>
       <h2 class="section-title">La regla de PROMPTFORGE</h2>
       <div class="demo"><code>¿Qué problema resuelve?
 ¿Existe una forma más simple?
@@ -104,7 +141,7 @@ Resultado: menos complejidad, menor coste y una salida verificable.</code></div>
 Si no podemos responder las tres: no lo agregamos.</code></div>
     </section>
 
-    <footer class="footer">PROMPTFORGE MCP · Arquitectura, prompts, agentes y automatización IA con complejidad justificada.<br>Contacto: disenoweb369@gmail.com</footer>
+    <footer class="footer">PROMPTFORGE · Automatización, arquitectura, prompts y agentes con complejidad justificada.<br>Chile · Contacto: disenoweb369@gmail.com</footer>
   </div>
 </body>
 </html>
