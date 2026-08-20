@@ -1,11 +1,31 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Caso 001 · Calificación y seguimiento de leads | PROMPTFORGE</title>
   <meta name="description" content="Demostración técnica PROMPTFORGE: arquitectura mínima para calificar, registrar y seguir leads con IA, reglas deterministas y control humano.">
+  <link rel="canonical" href="https://disenoweb369.github.io/promptforge-web/caso-001.html">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
   <meta name="theme-color" content="#0b1020">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:title" content="Caso 001 · Calificación y seguimiento de leads | PROMPTFORGE">
+  <meta property="og:description" content="Arquitectura demostrativa para calificar, registrar y seguir leads usando IA solo donde aporta valor.">
+  <meta property="og:url" content="https://disenoweb369.github.io/promptforge-web/caso-001.html">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TechArticle",
+    "headline":"Caso 001: Calificación y seguimiento de leads",
+    "description":"Demostración técnica de una arquitectura mínima para calificar, registrar y seguir leads con IA, reglas deterministas y control humano.",
+    "author":{"@type":"Organization","name":"PROMPTFORGE"},
+    "publisher":{"@type":"Organization","name":"PROMPTFORGE"},
+    "url":"https://disenoweb369.github.io/promptforge-web/caso-001.html",
+    "inLanguage":"es-CL"
+  }
+  </script>
   <style>
     :root{--bg:#0b1020;--panel:#121933;--text:#f4f7ff;--muted:#aeb7d1;--line:#283252;--accent:#8dd8ff;--accent2:#b7ffcf;--warm:#ffd58d;--max:1060px}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 20% 0%,#18254b 0,#0b1020 35%,#080c18 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.65}.wrap{width:min(var(--max),calc(100% - 32px));margin:auto}a{color:inherit}.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}.brand{font-weight:850;letter-spacing:.08em}.back{color:var(--muted);text-decoration:none}.hero{padding:64px 0 42px}.eyebrow{color:var(--accent2);font-size:.82rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.hero h1{font-size:clamp(2.5rem,6vw,5.1rem);line-height:1;margin:.35em 0 .3em;letter-spacing:-.05em;max-width:920px}.hero p,.lead{font-size:1.15rem;color:var(--muted);max-width:800px}.tag{display:inline-block;border:1px solid var(--line);padding:7px 11px;border-radius:999px;color:var(--warm);font-size:.82rem;margin-top:14px}section{padding:52px 0}.title{font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;letter-spacing:-.035em}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:24px}.card{background:linear-gradient(180deg,#131b35,#0f162a);border:1px solid var(--line);border-radius:18px;padding:21px}.card h3{margin-top:0}.card p{color:var(--muted);margin-bottom:0}.flow{background:#090e1d;border:1px solid var(--line);border-radius:20px;padding:24px;overflow:auto;margin-top:24px}.flow code{white-space:pre-wrap;color:#d7e6ff;font-size:.98rem}.check{padding-left:20px;color:var(--muted)}.check li{margin:8px 0}.result{border-left:3px solid var(--accent2);padding:1px 0 1px 16px;margin-top:20px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-block;text-decoration:none;border-radius:14px;padding:14px 18px;font-weight:850;border:1px solid var(--line)}.primary{background:linear-gradient(135deg,var(--accent),#b6f1ff);color:#06111a;border:none}.secondary{background:#10172b}.footer{padding:38px 0 62px;border-top:1px solid var(--line);color:#7f8aa8;font-size:.9rem}@media(max-width:800px){.grid{grid-template-columns:1fr}.hero{padding-top:38px}}
@@ -62,7 +82,7 @@ Métricas: respuesta · cotización · conversión · tiempo</code></div>
     <h2 class="title">Qué NO necesita IA</h2>
     <div class="grid">
       <article class="card"><h3>Cálculos</h3><p>Precios, descuentos, fechas y totales deben resolverse con código o reglas verificables.</p></article>
-      <article class="card"><h3>Estados</h3><p>El avance de cada lead debe persistir como datos estructurados, no depender de “memoria” conversacional.</p></article>
+      <article class="card"><h3>Estados</h3><p>El avance de cada lead debe persistir como datos estructurados, no depender de memoria conversacional.</p></article>
       <article class="card"><h3>Condiciones críticas</h3><p>Permisos, límites, derivaciones y acciones externas deben tener reglas explícitas y trazabilidad.</p></article>
     </div>
   </section>
@@ -90,11 +110,11 @@ Métricas: respuesta · cotización · conversión · tiempo</code></div>
     </div>
     <div class="actions">
       <a class="btn primary" href="mailto:disenoweb369@gmail.com?subject=Quiero%20un%20sistema%20similar%20al%20Caso%20001&body=Hola%2C%20vi%20el%20Caso%20001%20de%20PROMPTFORGE.%0A%0AMi%20negocio%3A%0AC%C3%B3mo%20recibo%20consultas%3A%0AQu%C3%A9%20parte%20quiero%20automatizar%3A">Quiero evaluar un sistema similar</a>
-      <a class="btn secondary" href="./">Ver PROMPTFORGE</a>
+      <a class="btn secondary" href="./automatizar-cotizaciones-whatsapp/">Ver cotizaciones por WhatsApp</a>
     </div>
   </section>
 
-  <footer class="footer">PROMPTFORGE · Caso 001 · Demostración técnica de arquitectura IA aplicada.<br>Contacto: disenoweb369@gmail.com</footer>
+  <footer class="footer">PROMPTFORGE · Caso 001 · Demostración técnica de arquitectura IA aplicada.<br>Chile · Contacto: disenoweb369@gmail.com</footer>
 </div>
 </body>
 </html>
